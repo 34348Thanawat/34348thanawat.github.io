@@ -2,34 +2,541 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<meta viewport="width=device-width, initial-scale=1.0">
-<title>แฟ้มสะสมงานของฉัน </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Portfolio | แฟ้มสะสมผลงาน</title>
+
 <style>
-body { font-family: sans-serif; background-color: #f4f7f6; text-align: center;
-padding: 30px; }
-.container { max-width: 800px; margin: 0 auto; }
-.project-card { background: white; padding: 20px; margin: 20px 0; border-radius:
-8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: left; }
-.btn { display: inline-block; background: #2c3e50; color: white; padding: 10px
-20px; text-decoration: none; border-radius: 5px; margin-top: 20px; }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7f6;
+    color: #2c3e50;
+    line-height: 1.7;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    background: linear-gradient(135deg, #2c3e50, #3498db);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+header h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 20px;
+}
+
+
+/* ===== NAVBAR ===== */
+
+nav {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+nav a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+nav a:hover {
+    color: #3498db;
+}
+
+
+/* ===== CONTAINER ===== */
+
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+.title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+
+/* ===== CARD ===== */
+
+.card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.card h3 {
+    color: #3498db;
+    margin-bottom: 12px;
+}
+
+
+/* ===== PROFILE ===== */
+
+.profile {
+    text-align: center;
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #3498db;
+    margin-bottom: 20px;
+}
+
+
+/* ===== UNIVERSITY ===== */
+
+.university {
+    text-align: center;
+    background: #eaf4fb;
+}
+
+.university h3 {
+    font-size: 25px;
+    color: #2980b9;
+}
+
+
+/* ===== GRID ===== */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+
+/* ===== PROJECT ===== */
+
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.project:hover {
+    transform: translateY(-5px);
+}
+
+.project h3 {
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+
+/* ===== CERTIFICATE ===== */
+
+.certificate {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.certificate img {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+
+/* ===== BUTTON ===== */
+
+.btn {
+    display: inline-block;
+    background: #3498db;
+    color: white;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 15px;
+}
+
+.btn:hover {
+    background: #2980b9;
+}
+
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 27px;
+    }
+
+}
+
 </style>
 </head>
+
+
 <body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <h1>PORTFOLIO</h1>
+
+    <p>แฟ้มสะสมผลงาน</p>
+
+    <p>เพื่อประกอบการศึกษาต่อระดับมหาวิทยาลัย</p>
+
+</header>
+
+
+<!-- ================= NAVIGATION ================= -->
+
+<nav>
+
+    <a href="#intro">คำนำ</a>
+
+    <a href="#profile">ประวัติส่วนตัว</a>
+
+    <a href="#university">มหาวิทยาลัย</a>
+
+    <a href="#projects">ผลงาน</a>
+
+    <a href="#certificates">เกียรติบัตร</a>
+
+    <a href="#activities">กิจกรรม</a>
+
+</nav>
+
+
 <div class="container">
-<h1> แฟ้มสะสมงาน (Portfolio)</h1>
-<p>นี่คือพื้นที่รวบรวมผลงานและกิจกรรมที่ภูมิใจครับ</p>
-<!-- กล่องผลงานชนที่ ้ิ 1 -->
-<div class="project-card">
-<h3>1. โครงงาน/ชิ้นงานวิทยาศาสตร์คำนวณ </h3>
-<p>รายละเอียดชิ้นงาน : เขียนอธิบายสั้นๆ ว่าทำอะไร ได้เรียนรู้อะไรจากงานนี้บ้าง </p>
+
+
+<!-- ================= คำนำ ================= -->
+
+<section id="intro">
+
+    <h2 class="title">คำนำ</h2>
+
+    <div class="card">
+
+        <p>
+        แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
+        ประวัติส่วนตัว ผลงาน กิจกรรม และเกียรติบัตร
+        ที่แสดงถึงความรู้ ความสามารถ และประสบการณ์
+        ของข้าพเจ้า
+        </p>
+
+        <br>
+
+        <p>
+        ข้าพเจ้ามีความสนใจในด้านวิทยาศาสตร์และวิศวกรรม
+        โดยเฉพาะวิศวกรรมเคมี และมีความตั้งใจที่จะนำความรู้
+        ไปประยุกต์ใช้ในการเรียนและการทำงานในอนาคต
+        </p>
+
+        <br>
+
+        <p>
+        ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
+        จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสนใจ
+        และความสามารถของข้าพเจ้าได้เป็นอย่างดี
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ประวัติส่วนตัว ================= -->
+
+<section id="profile">
+
+    <h2 class="title">ประวัติส่วนตัว</h2>
+
+    <div class="card profile">
+
+        <!-- ใส่รูปตัวเองตรงนี้ -->
+
+        <img src="profile.jpg"
+             alt="รูปโปรไฟล์"
+             class="profile-img">
+
+        <h2>ชื่อ - นามสกุล</h2>
+
+        <p>ชื่อเล่น : ฟิว</p>
+
+        <p>ระดับชั้น : มัธยมศึกษาปีที่ 6</p>
+
+        <p>โรงเรียน : บ้านบึงอุตสาหกรรมนุเคราะห์</p>
+
+        <p>แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์</p>
+
+        <p>ความสนใจ : วิทยาศาสตร์และวิศวกรรม</p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= มหาวิทยาลัย ================= -->
+
+<section id="university">
+
+    <h2 class="title">มหาวิทยาลัยที่ต้องการเข้าศึกษา</h2>
+
+    <div class="card university">
+
+        <h3>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
+
+        <p>
+        คณะวิศวกรรมศาสตร์
+        </p>
+
+        <p>
+        สาขาวิศวกรรมเคมี
+        </p>
+
+        <p>
+        เหตุผลที่สนใจ:
+        มีความสนใจด้านเคมี กระบวนการผลิต
+        และต้องการนำความรู้ทางวิศวกรรมไปประยุกต์ใช้
+        ในอุตสาหกรรม โดยเฉพาะอุตสาหกรรมปิโตรเลียมและโรงงาน
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ผลงาน ================= -->
+
+<section id="projects">
+
+    <h2 class="title">ผลงาน</h2>
+
+    <div class="grid">
+
+
+        <div class="project">
+
+            <h3>🧪 โครงงานยาดมสมุนไพร</h3>
+
+            <p>
+            ศึกษาและพัฒนายาดมสมุนไพร
+            โดยเปรียบเทียบสูตรของสมุนไพร
+            และศึกษาความพึงพอใจของผู้ใช้งาน
+            </p>
+
+            <a href="#" class="btn">
+            ดูรายละเอียด
+            </a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>🗑️ ถังขยะอัจฉริยะ</h3>
+
+            <p>
+            ออกแบบถังขยะอัจฉริยะโดยใช้ ESP32
+            และเซนเซอร์ Ultrasonic
+            เพื่อตรวจสอบระดับขยะ
+            </p>
+
+            <a href="#" class="btn">
+            ดูรายละเอียด
+            </a>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>⚗️ ผลงานด้านวิทยาศาสตร์</h3>
+
+            <p>
+            การทดลองและกิจกรรมทางวิทยาศาสตร์
+            เพื่อฝึกการคิดวิเคราะห์
+            และการแก้ไขปัญหาอย่างเป็นระบบ
+            </p>
+
+            <a href="#" class="btn">
+            ดูรายละเอียด
+            </a>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= เกียรติบัตร ================= -->
+
+<section id="certificates">
+
+    <h2 class="title">เกียรติบัตร</h2>
+
+    <div class="grid">
+
+
+        <div class="certificate">
+
+            <!-- เปลี่ยน certificate1.jpg เป็นรูปเกียรติบัตร -->
+
+            <img src="certificate1.jpg"
+                 alt="เกียรติบัตรใบที่ 1">
+
+            <h3>เกียรติบัตรกิจกรรมที่ 1</h3>
+
+            <p>
+            รายละเอียดกิจกรรมหรือการแข่งขัน
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <img src="certificate2.jpg"
+                 alt="เกียรติบัตรใบที่ 2">
+
+            <h3>เกียรติบัตรกิจกรรมที่ 2</h3>
+
+            <p>
+            รายละเอียดกิจกรรมหรือการแข่งขัน
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <img src="certificate3.jpg"
+                 alt="เกียรติบัตรใบที่ 3">
+
+            <h3>เกียรติบัตรกิจกรรมที่ 3</h3>
+
+            <p>
+            รายละเอียดกิจกรรมหรือการแข่งขัน
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- ================= กิจกรรม ================= -->
+
+<section id="activities">
+
+    <h2 class="title">กิจกรรม</h2>
+
+    <div class="card">
+
+        <h3>⚗️ Chemical Engineering Workshop</h3>
+
+        <p>
+        เข้าร่วม Workshop ด้านเคมี
+        ได้เรียนรู้เกี่ยวกับการทดลองทางเคมี
+        และการประยุกต์ใช้ความรู้ทางเคมี
+        </p>
+
+    </div>
+
+
+    <div class="card">
+
+        <h3>🏫 กิจกรรมภายในโรงเรียน</h3>
+
+        <p>
+        เข้าร่วมกิจกรรมต่าง ๆ ของโรงเรียน
+        และทำงานร่วมกับผู้อื่น
+        เพื่อพัฒนาทักษะการทำงานเป็นทีม
+        </p>
+
+    </div>
+
+</section>
+
+
 </div>
-<!-- กล่องผลงานชนที่ ้ิ 2 -->
-<div class="project-card">
-<h3>2. กิจกรรม/เกียรติบัตรที่ได้รับ</h3>
-<p>รายละเอียดชิ้นงาน : เข้าร่วมการประกวด หรือกิจกรรมของโรงเรียน...</p>
-</div>
-<!-- ปุ่มกดกลับหน้าแรก -->
-<a href="index.html" class="btn"> กลับหน้าแรก</a>
-</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p>Portfolio ของฉัน</p>
+
+    <p>Thank you for visiting</p>
+
+</footer>
+
+
 </body>
 </html>
