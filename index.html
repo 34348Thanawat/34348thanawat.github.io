@@ -2,30 +2,256 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-<title>หน้าแนะนำตัวของฉัน</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Thanawat Hawhan | Portfolio</title>
+
 <style>
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-background-color: #50C878; color: #333;
-text-align: center; padding: 50px;
+    margin: 0;
+    font-family: Arial, "Tahoma", sans-serif;
+    background: linear-gradient(135deg, #dff6ff, #87ceeb);
+    color: #1f2937;
+}
+
+/* เมนู */
+nav {
+    background: #0077b6;
+    padding: 18px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #caf0f8;
+}
+
+/* กล่องหลัก */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* การ์ดแนะนำตัว */
+.hero {
+    background: white;
+    border-radius: 30px;
+    padding: 45px 30px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* รูปโปรไฟล์ */
+.profile-img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #48cae4;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* ชื่อ */
+h1 {
+    color: #0077b6;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #555;
+    font-size: 20px;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.8;
+    margin-top: 20px;
+}
+
+/* ปุ่ม */
+.btn {
+    display: inline-block;
+    background: #0096c7;
+    color: white;
+    padding: 14px 28px;
+    text-decoration: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #023e8a;
+    transform: translateY(-3px);
+}
+
+/* กล่องข้อมูล */
+.info {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.box {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.box h2 {
+    color: #0077b6;
+    font-size: 22px;
+}
+
+.box p {
+    line-height: 1.6;
+}
+
+/* Footer */
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
+}
+
+/* มือถือ */
+@media (max-width: 700px) {
+
+    .info {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    nav a {
+        margin: 0 8px;
+    }
 
 }
-.card {
-background: green; border-radius: 50px;
-box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-max-width: 500px; margin: 0 auto; padding: 30px;
 
-}
-h1 { color: #50C878; }
-p { font-size: 18px; line-height: 1.6; }
 </style>
 </head>
+
 <body>
-<div class="card">
-<h1>ยินดีต้อนรับสู่โปรไฟล์ของฉัน </h1>
-<p>สวัสดีครับ! ผมชื่อ <strong>ธนวัฒน์ ห้าวหาญ (Thanawat Hawhan)</strong></p>
-<p>ขณะนี้กำลังศึกษา/สนใจด้าน Chemical Engineering</p>
-<p>นี่คือเว็บไซต์แรกของผมที่โฮสต์บน GitHub Pages!</p>
-  <a href="portfolio.html" style="display:inline-block; background:#3498db; color:white; padding:10px 20px; text-decoration:none; border-radius:5px; margin-top:15px;">👉 ดูแฟ้มสะสมงานของผม</a>
+
+<!-- เมนู -->
+<nav>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="portfolio.html">Portfolio</a>
+</nav>
+
+
+<div class="container">
+
+    <!-- แนะนำตัว -->
+    <div class="hero">
+
+        <!-- ใส่รูปของฟิว โดยตั้งชื่อไฟล์ profile.jpg -->
+        <img src="profile.jpg"
+             alt="รูปโปรไฟล์"
+             class="profile-img">
+
+        <h1>ธนวัฒน์ ห้าวหาญ</h1>
+
+        <div class="subtitle">
+            Thanawat Hawhan
+        </div>
+
+        <p class="description">
+            สวัสดีครับ ผมชื่อ <strong>ธนวัฒน์ ห้าวหาญ</strong>
+        </p>
+
+        <p class="description">
+            ผมมีความสนใจในด้าน
+            <strong>วิศวกรรมเคมี (Chemical Engineering)</strong>
+            และมีความตั้งใจที่จะศึกษาต่อในสายวิศวกรรม
+        </p>
+
+        <a href="portfolio.html" class="btn">
+            👉 ดูแฟ้มสะสมงานของผม
+        </a>
+
+    </div>
+
+
+    <!-- ข้อมูลของผม -->
+    <div class="info">
+
+        <div class="box">
+            <h2>🎓 คณะที่อยากเข้า</h2>
+
+            <p>
+                วิศวกรรมเคมี<br>
+                Chemical Engineering
+            </p>
+        </div>
+
+
+        <div class="box">
+            <h2>🏫 มหาวิทยาลัยเป้าหมาย</h2>
+
+            <p>
+                สถาบันเทคโนโลยีพระจอมเกล้า
+                เจ้าคุณทหารลาดกระบัง
+                <br>
+                (สจล.)
+            </p>
+        </div>
+
+
+        <div class="box">
+            <h2>🛢️ เป้าหมายในอนาคต</h2>
+
+            <p>
+                เป็นเจ้าของธุรกิจด้านน้ำมัน
+                และมีบ่อน้ำมันเป็นของตัวเอง
+            </p>
+        </div>
+
+    </div>
+
 </div>
+
+
+<!-- Footer -->
+<footer>
+
+    <p>Portfolio ของ ธนวัฒน์ ห้าวหาญ</p>
+
+    <p>เป้าหมายวันนี้ คือวิศวกรเคมี
+    เป้าหมายในอนาคต คือเจ้าของบ่อน้ำมัน 🛢️</p>
+
+</footer>
+
 </body>
 </html>
