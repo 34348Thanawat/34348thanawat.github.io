@@ -3,105 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>เกียรติบัตร | Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#e6f6ff,#f8fcff);
-color:#29465a;
-min-height:100vh;
-display:flex;
-flex-direction:column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ef;
+    color: #333;
 }
 
-nav a{
-color:#287db7;
-text-decoration:none;
-font-weight:bold;
-margin:0 10px;
+nav {
+    background: white;
+    padding: 18px 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.page{
-flex:1;
-padding:50px 20px;
+nav a {
+    color: #e87511;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 9px;
+    display: inline-block;
 }
 
-.container{
-max-width:1000px;
-margin:auto;
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-h1{
-text-align:center;
-color:#287db7;
-margin-bottom:40px;
+.title {
+    text-align: center;
+    color: #e87511;
+    font-size: 38px;
+    margin-bottom: 35px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:25px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
-.card{
-background:white;
-padding:20px;
-border-radius:25px;
-text-align:center;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
+.certificate {
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(230,120,20,0.12);
 }
 
-.card img{
-width:100%;
-height:230px;
-object-fit:contain;
-border-radius:15px;
-background:#f5faff;
-margin-bottom:15px;
+.certificate img {
+    width: 100%;
+    height: 230px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin-bottom: 15px;
 }
 
-h2{
-color:#287db7;
-font-size:20px;
-margin-bottom:10px;
+.certificate h3 {
+    color: #e87511;
+    margin-bottom: 10px;
 }
 
-p{
-font-size:15px;
-line-height:1.7;
+.certificate p {
+    color: #666;
 }
 
-.buttons{
-text-align:center;
-margin-top:45px;
+.btn-area {
+    text-align: center;
+    margin-top: 35px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin:5px;
-background:#318bd0;
-color:white;
-text-decoration:none;
-border-radius:25px;
-font-weight:bold;
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    background: #f58220;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#28526d;
-color:white;
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:800px) {
+
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
 }
 </style>
 </head>
@@ -109,76 +126,84 @@ color:white;
 <body>
 
 <nav>
-<a href="index.html">หน้าหลัก</a>
-<a href="intro.html">คำนำ</a>
-<a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="intro.html">คำนำ</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="projects.html">ผลงาน</a>
+    <a href="certificates.html">เกียรติบัตร</a>
+    <a href="activities.html">กิจกรรม</a>
 </nav>
-
-<div class="page">
 
 <div class="container">
 
-<h1>เกียรติบัตร ✦</h1>
+    <h1 class="title">เกียรติบัตร</h1>
 
-<div class="grid">
+    <div class="grid">
 
-<!-- ใบที่ 1 -->
-<div class="card">
+        <!-- เกียรติบัตร 1 -->
+        <div class="certificate">
 
-<img src="certificate1.jpg" alt="เกียรติบัตรใบที่ 1">
+            <img src="certificate1.jpg"
+                 alt="เกียรติบัตรใบที่ 1">
 
-<h2>เกียรติบัตรใบที่ 1</h2>
+            <h3>เกียรติบัตรใบที่ 1</h3>
 
-<p>
-รายละเอียดเกียรติบัตร
-</p>
+            <p>
+                รายละเอียดเกียรติบัตร
+            </p>
+
+        </div>
+
+
+        <!-- เกียรติบัตร 2 -->
+        <div class="certificate">
+
+            <img src="certificate2.jpg"
+                 alt="เกียรติบัตรใบที่ 2">
+
+            <h3>เกียรติบัตรใบที่ 2</h3>
+
+            <p>
+                รายละเอียดเกียรติบัตร
+            </p>
+
+        </div>
+
+
+        <!-- เกียรติบัตร 3 -->
+        <div class="certificate">
+
+            <img src="certificate3.jpg"
+                 alt="เกียรติบัตรใบที่ 3">
+
+            <h3>เกียรติบัตรใบที่ 3</h3>
+
+            <p>
+                รายละเอียดเกียรติบัตร
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="btn-area">
+
+        <a href="projects.html" class="btn">
+            ← ผลงาน
+        </a>
+
+        <a href="activities.html" class="btn">
+            กิจกรรม →
+        </a>
+
+    </div>
 
 </div>
 
-
-<!-- ใบที่ 2 -->
-<div class="card">
-
-<img src="certificate2.jpg" alt="เกียรติบัตรใบที่ 2">
-
-<h2>เกียรติบัตรใบที่ 2</h2>
-
-<p>
-รายละเอียดเกียรติบัตร
-</p>
-
-</div>
-
-
-<!-- ใบที่ 3 -->
-<div class="card">
-
-<img src="certificate3.jpg" alt="เกียรติบัตรใบที่ 3">
-
-<h2>เกียรติบัตรใบที่ 3</h2>
-
-<p>
-รายละเอียดเกียรติบัตร
-</p>
-
-</div>
-
-</div>
-
-<div class="buttons">
-
-<a href="projects.html" class="btn">← ย้อนกลับ</a>
-
-<a href="index.html" class="btn">หน้าหลัก</a>
-
-<a href="activities.html" class="btn">ถัดไป →</a>
-
-</div>
-
-</div>
-</div>
-
-<footer>Portfolio ของฉัน</footer>
+<footer>
+    <p>🧡 Portfolio ของฉัน</p>
+</footer>
 
 </body>
 </html>
