@@ -4,14 +4,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Portfolio | แฟ้มสะสมผลงาน</title>
+<title>Portfolio | Thanawat</title>
 
 <style>
-
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -20,237 +19,430 @@ html {
 
 body {
     font-family: Arial, sans-serif;
-    background: #f4f7f6;
-    color: #2c3e50;
-    line-height: 1.7;
+    background: #f5faff;
+    color: #26384a;
+    line-height: 1.8;
 }
 
-/* ===== HEADER ===== */
-
-header {
-    background: linear-gradient(135deg, #2c3e50, #3498db);
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-}
-
-header h1 {
-    font-size: 45px;
-    margin-bottom: 10px;
-}
-
-header p {
-    font-size: 20px;
-}
-
-
-/* ===== NAVBAR ===== */
+/* ================= NAV ================= */
 
 nav {
-    background: white;
-    padding: 15px;
-    text-align: center;
     position: sticky;
     top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
+
+    background: rgba(255,255,255,0.95);
+    padding: 15px 20px;
+
+    text-align: center;
+
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
 }
 
 nav a {
+    display: inline-block;
+
+    margin: 5px 10px;
+    padding: 8px 14px;
+
+    color: #2676b8;
     text-decoration: none;
-    color: #2c3e50;
     font-weight: bold;
-    margin: 0 12px;
+
+    border-radius: 20px;
+
+    transition: 0.3s;
 }
 
 nav a:hover {
-    color: #3498db;
+    background: #dff1ff;
+    transform: translateY(-2px);
 }
 
+/* ================= HERO ================= */
 
-/* ===== CONTAINER ===== */
+.hero {
+    min-height: 520px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 70px 20px;
+
+    background:
+        radial-gradient(circle at 10% 20%, #ffffff 0, transparent 25%),
+        radial-gradient(circle at 90% 80%, #d7efff 0, transparent 30%),
+        linear-gradient(135deg, #dff4ff, #eef9ff);
+}
+
+.hero-box {
+    max-width: 850px;
+
+    background: rgba(255,255,255,0.85);
+
+    padding: 50px 35px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 10px 35px rgba(48,130,180,0.15);
+}
+
+.hero h1 {
+    font-size: 55px;
+    color: #2477b7;
+    margin-bottom: 10px;
+}
+
+.hero h2 {
+    font-size: 28px;
+    color: #38566d;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #607789;
+}
+
+.hero-decoration {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+/* ================= BUTTON ================= */
+
+.btn {
+    display: inline-block;
+
+    margin-top: 25px;
+    padding: 12px 25px;
+
+    background: #318bd0;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 25px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #216da9;
+    transform: translateY(-3px);
+}
+
+/* ================= CONTAINER ================= */
 
 .container {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    padding: 50px 20px;
+    padding: 70px 20px;
 }
 
 section {
-    margin-bottom: 60px;
+    margin-bottom: 80px;
 }
 
-.title {
+.section-title {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 30px;
-    color: #2c3e50;
+
+    font-size: 35px;
+
+    color: #2677b6;
+
+    margin-bottom: 35px;
 }
 
+.section-title::after {
+    content: " ✦ ";
+    color: #77bce8;
+}
 
-/* ===== CARD ===== */
+/* ================= CARD ================= */
 
 .card {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    padding: 35px;
+
+    margin-bottom: 25px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+
+    border: 1px solid #e4f2fb;
 }
 
 .card h3 {
-    color: #3498db;
+    color: #2782c4;
     margin-bottom: 12px;
 }
 
+.card p {
+    color: #596f80;
+}
 
-/* ===== PROFILE ===== */
+/* ================= PROFILE ================= */
 
 .profile {
     text-align: center;
 }
 
 .profile-img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
+    width: 180px;
+    height: 180px;
+
     object-fit: cover;
-    border: 5px solid #3498db;
+
+    border-radius: 50%;
+
+    border: 7px solid #b9e2fa;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+
     margin-bottom: 20px;
 }
 
-
-/* ===== UNIVERSITY ===== */
-
-.university {
-    text-align: center;
-    background: #eaf4fb;
-}
-
-.university h3 {
-    font-size: 25px;
-    color: #2980b9;
-}
-
-
-/* ===== GRID ===== */
-
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-
-/* ===== PROJECT ===== */
-
-.project {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-    transition: 0.3s;
-}
-
-.project:hover {
-    transform: translateY(-5px);
-}
-
-.project h3 {
-    color: #3498db;
+.profile h2 {
+    color: #2c5874;
     margin-bottom: 10px;
 }
 
+/* ================= INFO ================= */
 
-/* ===== CERTIFICATE ===== */
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+
+    gap: 20px;
+}
+
+.info-box {
+    background: #edf8ff;
+
+    padding: 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box .icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.info-box h3 {
+    color: #277db9;
+}
+
+/* ================= UNIVERSITY ================= */
+
+.university {
+    text-align: center;
+
+    background:
+        linear-gradient(135deg, #eaf7ff, #ffffff);
+}
+
+.university h3 {
+    font-size: 27px;
+    color: #2274ad;
+}
+
+/* ================= PROJECT ================= */
+
+.project-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+    gap: 25px;
+}
+
+.project {
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 22px;
+
+    box-shadow: 0 7px 25px rgba(0,0,0,0.07);
+
+    transition: 0.3s;
+
+    border-top: 5px solid #62b5e8;
+}
+
+.project:hover {
+    transform: translateY(-7px);
+}
+
+.project-icon {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+
+.project h3 {
+    color: #287fb9;
+    margin-bottom: 10px;
+}
+
+/* ================= CERTIFICATE ================= */
+
+.certificate-grid {
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+    gap: 25px;
+}
 
 .certificate {
     background: white;
+
     padding: 20px;
-    border-radius: 15px;
+
+    border-radius: 20px;
+
     text-align: center;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    box-shadow: 0 7px 25px rgba(0,0,0,0.07);
 }
 
 .certificate img {
     width: 100%;
-    max-height: 250px;
+
+    height: 220px;
+
     object-fit: contain;
-    border-radius: 10px;
+
+    border-radius: 12px;
+
+    background: #f5faff;
+
     margin-bottom: 15px;
 }
 
-
-/* ===== BUTTON ===== */
-
-.btn {
-    display: inline-block;
-    background: #3498db;
-    color: white;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin-top: 15px;
+.certificate h3 {
+    color: #287db7;
+    margin-bottom: 8px;
 }
 
-.btn:hover {
-    background: #2980b9;
+.certificate p {
+    font-size: 14px;
+    color: #647989;
 }
 
+/* ================= ACTIVITIES ================= */
 
-/* ===== FOOTER ===== */
+.activity {
+    display: flex;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.activity-icon {
+    min-width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #e2f4ff;
+
+    border-radius: 50%;
+
+    font-size: 30px;
+}
+
+/* ================= FOOTER ================= */
 
 footer {
-    background: #2c3e50;
+    background: #28526d;
+
     color: white;
+
     text-align: center;
-    padding: 30px;
+
+    padding: 45px 20px;
 }
 
+footer p {
+    margin-bottom: 8px;
+}
 
-/* ===== MOBILE ===== */
+footer .btn {
+    background: white;
+    color: #287bb5;
+}
+
+/* ================= MOBILE ================= */
 
 @media (max-width: 600px) {
 
-    header h1 {
-        font-size: 32px;
+    .hero {
+        min-height: 450px;
+    }
+
+    .hero-box {
+        padding: 35px 20px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 22px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-title {
+        font-size: 28px;
     }
 
     nav a {
-        display: inline-block;
-        margin: 5px;
-        font-size: 14px;
+        font-size: 13px;
+        margin: 3px;
+        padding: 7px 9px;
     }
 
-    .title {
-        font-size: 27px;
+    .activity {
+        flex-direction: column;
+        text-align: center;
     }
-
 }
-
 </style>
 </head>
 
-
 <body>
 
-
-<!-- ================= HEADER ================= -->
-
-<header>
-
-    <h1>PORTFOLIO</h1>
-
-    <p>แฟ้มสะสมผลงาน</p>
-
-    <p>เพื่อประกอบการศึกษาต่อระดับมหาวิทยาลัย</p>
-
-</header>
-
-
-<!-- ================= NAVIGATION ================= -->
+<!-- ================= NAV ================= -->
 
 <nav>
+
+    <a href="index.html">หน้าหลัก</a>
 
     <a href="#intro">คำนำ</a>
 
@@ -267,38 +459,74 @@ footer {
 </nav>
 
 
+<!-- ================= HERO ================= -->
+
+<header class="hero">
+
+    <div class="hero-box">
+
+        <div class="hero-decoration">
+            ⚗️ 🧪 ✦
+        </div>
+
+        <h1>PORTFOLIO</h1>
+
+        <h2>แฟ้มสะสมผลงาน</h2>
+
+        <p>
+            นายธนวัฒน์ ห้าวหาญ
+        </p>
+
+        <p>
+            มัธยมศึกษาปีที่ 6
+        </p>
+
+        <p>
+            ความสนใจด้านวิศวกรรมเคมี
+        </p>
+
+        <a href="#profile" class="btn">
+            ดู Portfolio
+        </a>
+
+    </div>
+
+</header>
+
+
 <div class="container">
 
 
-<!-- ================= คำนำ ================= -->
+<!-- ================= INTRO ================= -->
 
 <section id="intro">
 
-    <h2 class="title">คำนำ</h2>
+    <h2 class="section-title">
+        คำนำ
+    </h2>
 
     <div class="card">
 
         <p>
-        แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
-        ประวัติส่วนตัว ผลงาน กิจกรรม และเกียรติบัตร
-        ที่แสดงถึงความรู้ ความสามารถ และประสบการณ์
-        ของข้าพเจ้า
+            แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
+            ประวัติส่วนตัว ผลงาน กิจกรรม และเกียรติบัตร
+            ที่แสดงถึงความรู้ ความสามารถ และประสบการณ์ของข้าพเจ้า
         </p>
 
         <br>
 
         <p>
-        ข้าพเจ้ามีความสนใจในด้านวิทยาศาสตร์และวิศวกรรม
-        โดยเฉพาะวิศวกรรมเคมี และมีความตั้งใจที่จะนำความรู้
-        ไปประยุกต์ใช้ในการเรียนและการทำงานในอนาคต
+            ข้าพเจ้ามีความสนใจในด้านวิทยาศาสตร์และวิศวกรรม
+            โดยเฉพาะวิศวกรรมเคมี และมีความตั้งใจที่จะนำความรู้
+            ไปประยุกต์ใช้ในการเรียนและการทำงานในอนาคต
         </p>
 
         <br>
 
         <p>
-        ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
-        จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสนใจ
-        และความสามารถของข้าพเจ้าได้เป็นอย่างดี
+            ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
+            จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสนใจ
+            และความสามารถของข้าพเจ้าได้เป็นอย่างดี
         </p>
 
     </div>
@@ -306,60 +534,130 @@ footer {
 </section>
 
 
-<!-- ================= ประวัติส่วนตัว ================= -->
+<!-- ================= PROFILE ================= -->
 
 <section id="profile">
 
-    <h2 class="title">ประวัติส่วนตัว</h2>
+    <h2 class="section-title">
+        ประวัติส่วนตัว
+    </h2>
 
     <div class="card profile">
 
-        <!-- ใส่รูปตัวเองตรงนี้ -->
+        <img
+            src="IMG_2192.jpeg"
+            alt="รูปโปรไฟล์"
+            class="profile-img"
+        >
 
-        <img src=IMG_2192.jpeg
-             alt="รูปโปรไฟล์"
-             class="profile-img">
+        <h2>
+            นายธนวัฒน์ ห้าวหาญ
+        </h2>
 
-        <h2>ชื่อ - นามสกุล : นายธนวัฒน์ ห้าวหาญ</h2>
+        <p>
+            ชื่อเล่น : กาฟิวส์
+        </p>
 
-        <p>ชื่อเล่น : กาฟิวส์</p>
+        <p>
+            ระดับชั้น : มัธยมศึกษาปีที่ 6
+        </p>
 
-        <p>ระดับชั้น : มัธยมศึกษาปีที่ 6</p>
+        <p>
+            โรงเรียน : บ้านบึง "อุตสาหกรรมนุเคราะห์"
+        </p>
 
-        <p>โรงเรียน : บ้านบึง"อุตสาหกรรมนุเคราะห์"</p>
+        <p>
+            แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์
+        </p>
 
-        <p>แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์</p>
+        <p>
+            ความสนใจ : วิศวกรรมเคมี
+        </p>
 
-        <p>ความสนใจ : เตรียมวิศวกรรม</p>
+    </div>
+
+
+    <div class="info-grid">
+
+        <div class="info-box">
+
+            <div class="icon">🏫</div>
+
+            <h3>การศึกษา</h3>
+
+            <p>
+                มัธยมศึกษาปีที่ 6
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="icon">⚗️</div>
+
+            <h3>ความสนใจ</h3>
+
+            <p>
+                วิศวกรรมเคมี
+            </p>
+
+        </div>
+
+
+        <div class="info-box">
+
+            <div class="icon">🏭</div>
+
+            <h3>เป้าหมาย</h3>
+
+            <p>
+                อุตสาหกรรมปิโตรเลียมและโรงงาน
+            </p>
+
+        </div>
 
     </div>
 
 </section>
 
 
-<!-- ================= มหาวิทยาลัย ================= -->
+<!-- ================= UNIVERSITY ================= -->
 
 <section id="university">
 
-    <h2 class="title">มหาวิทยาลัยที่ต้องการเข้าศึกษา</h2>
+    <h2 class="section-title">
+        มหาวิทยาลัยที่ต้องการเข้าศึกษา
+    </h2>
 
     <div class="card university">
 
-        <h3>สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</h3>
+        <div style="font-size:55px;">
+            🎓
+        </div>
+
+        <h3>
+            สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+        </h3>
+
+        <br>
 
         <p>
-        คณะวิศวกรรมศาสตร์
+            คณะวิศวกรรมศาสตร์
         </p>
 
         <p>
-        สาขาวิศวกรรมเคมี
+            สาขาวิศวกรรมเคมี
         </p>
 
+        <br>
+
         <p>
-        เหตุผลที่สนใจ:
-        มีความสนใจด้านเคมีและการคำนวณ กระบวนการผลิต
-        และต้องการนำความรู้ทางวิศวกรรมไปประยุกต์ใช้
-        ในอุตสาหกรรม โดยเฉพาะอุตสาหกรรมปิโตรเลียมและโรงงาน
+            เหตุผลที่สนใจ:
+            มีความสนใจด้านเคมีและการคำนวณ
+            กระบวนการผลิต และต้องการนำความรู้ทางวิศวกรรม
+            ไปประยุกต์ใช้ในอุตสาหกรรม
+            โดยเฉพาะอุตสาหกรรมปิโตรเลียมและโรงงาน
         </p>
 
     </div>
@@ -367,36 +665,54 @@ footer {
 </section>
 
 
-<!-- ================= ผลงาน ================= -->
+<!-- ================= PROJECTS ================= -->
 
 <section id="projects">
 
-    <h2 class="title">ผลงาน</h2>
+    <h2 class="section-title">
+        ผลงาน
+    </h2>
 
-    <div class="grid">
+
+    <div class="project-grid">
 
 
         <div class="project">
-            <h3>🧪 โครงงานยาดมสมุนไพร</h3>
+
+            <div class="project-icon">
+                🧪
+            </div>
+
+            <h3>
+                โครงงานยาดมสมุนไพร
+            </h3>
 
             <p>
-            ศึกษาและพัฒนายาดมสมุนไพร
-            โดยเปรียบเทียบสูตรของสมุนไพร
-            และศึกษาความพึงพอใจของผู้ใช้งาน
+                ศึกษาและพัฒนายาดมสมุนไพร
+                โดยเปรียบเทียบสูตรของสมุนไพร
+                และศึกษาความพึงพอใจของผู้ใช้งาน
             </p>
 
         </div>
 
 
         <div class="project">
-            <h3>🗑️ ถังขยะอัจฉริยะ</h3>
+
+            <div class="project-icon">
+                🗑️
+            </div>
+
+            <h3>
+                ถังขยะอัจฉริยะ
+            </h3>
 
             <p>
-            ออกแบบถังขยะอัจฉริยะโดยใช้ ESP32
-            และเซนเซอร์ Ultrasonic
-            เพื่อตรวจสอบระดับขยะ
+                ออกแบบถังขยะอัจฉริยะโดยใช้ ESP32
+                และเซนเซอร์ Ultrasonic
+                เพื่อตรวจสอบระดับขยะ
             </p>
 
+        </div>
 
 
     </div>
@@ -404,139 +720,229 @@ footer {
 </section>
 
 
-<!-- ================= เกียรติบัตร ================= -->
+<!-- ================= CERTIFICATES ================= -->
 
 <section id="certificates">
 
-    <h2 class="title">เกียรติบัตร</h2>
+    <h2 class="section-title">
+        เกียรติบัตร
+    </h2>
 
-    <div class="grid">
+
+    <div class="certificate-grid">
 
 
         <div class="certificate">
 
-            <!-- เปลี่ยน certificate1.jpg เป็นรูปเกียรติบัตร -->
+            <img
+                src="Certificate.png"
+                alt="เกียรติบัตรใบที่ 1"
+            >
 
-            <img src=Certificate.png
-                 alt="เกียรติบัตรใบที่ 1">
-
-            <h3>เกียรติบัตรกิจกรรมที่ 1</h3>
+            <h3>
+                Workshop วิศวะเคมี
+            </h3>
 
             <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้เข้าร่วมกิจกรรม Workshop วิศวะเคมี</p>
+                ได้เข้าร่วมกิจกรรม Workshop วิศวะเคมี
+            </p>
 
         </div>
-<div class="certificate">
 
-            <img src=att.mALYvT04rHjWAPUUBY8tgW4eSA0_3UJTNqVjhe-j32c.jpeg
-                 alt="เกียรติบัตรใบที่ 2">
 
-            <h3>เกียรติบัตรกิจกรรมที่ 2</h3>
-
-            <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้เข้าร่วมการอบรมโครงการส่งเสริมการเรียนรู้หน้าที่พลเมืองดิจิทัล</p>
-</div>
         <div class="certificate">
 
-            <img src=IMG_2746.jpg
-                 alt="เกียรติบัตรใบที่ 3">
+            <img
+                src="att.mALYvT04rHjWAPUUBY8tgW4eSA0_3UJTNqVjhe-j32c.jpeg"
+                alt="เกียรติบัตรใบที่ 2"
+            >
 
-            <h3>เกียรติบัตรกิจกรรมที่ 3</h3>
+            <h3>
+                หน้าที่พลเมืองดิจิทัล
+            </h3>
 
             <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้เข้าร่วมกิจการงานวันวิทยาศาสตร์</p>
+                ได้เข้าร่วมการอบรมโครงการส่งเสริมการเรียนรู้หน้าที่พลเมืองดิจิทัล
+            </p>
 
         </div>
-<div class="certificate">
 
-            <img src=IMG_0691.jpeg
-                 alt="เกียรติบัตรใบที่ 4">
 
-            <h3>เกียรติบัตรกิจกรรมที่ 4</h3>
-
-            <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้เข้าร่วมกิจกรรมห้องเรียนจำลอง วิศวะเคมี</p>
-</div>
         <div class="certificate">
 
-            <img src=เกียรติบัตรคณิตคิดเร็ว.jpg
-                 alt="เกียรติบัตรใบที่ 5">
+            <img
+                src="IMG_2746.jpg"
+                alt="เกียรติบัตรใบที่ 3"
+            >
 
-            <h3>เกียรติบัตรกิจกรรมที่ 5</h3>
+            <h3>
+                กิจกรรมวันวิทยาศาสตร์
+            </h3>
 
             <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้มีโอกาสเข้าร่วมการแข่งขันคณิตคิดเร็วม.ปลาย</p>
+                ได้เข้าร่วมกิจกรรมงานวันวิทยาศาสตร์
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <img
+                src="IMG_0691.jpeg"
+                alt="เกียรติบัตรใบที่ 4"
+            >
+
+            <h3>
+                ห้องเรียนจำลอง วิศวะเคมี
+            </h3>
+
+            <p>
+                ได้เข้าร่วมกิจกรรมห้องเรียนจำลอง วิศวะเคมี
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <img
+                src="เกียรติบัตรคณิตคิดเร็ว.jpg"
+                alt="เกียรติบัตรใบที่ 5"
+            >
+
+            <h3>
+                การแข่งขันคณิตคิดเร็ว
+            </h3>
+
+            <p>
+                ได้มีโอกาสเข้าร่วมการแข่งขันคณิตคิดเร็วม.ปลาย
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <!-- ใบที่ 6 เป็น PDF -->
+            <div style="font-size:60px;">
+                📄
             </div>
-<div class="certificate">
 
-            <img src=34348-ธนวัฒน์-ห้าวหาญ.pdf
-                 alt="เกียรติบัตรใบที่ 6">
-
-            <h3>เกียรติบัตรกิจกรรมที่ 6</h3>
+            <h3>
+                นักเรียนจิตอาสา
+            </h3>
 
             <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            เป็นนักเรียนจิตอาสาในงานเปิดบ้านวิชาการ"BBU JOB FAIR"</p>
+                เป็นนักเรียนจิตอาสาในงานเปิดบ้านวิชาการ
+                "BBU JOB FAIR"
+            </p>
+
+            <a
+                href="34348-ธนวัฒน์-ห้าวหาญ.pdf"
+                target="_blank"
+                class="btn"
+            >
+                เปิดเกียรติบัตร
+            </a>
+
         </div>
-<div class="certificate">
 
-            <img src=prev.IYoP52kTJj3W0E9Z3VPuQqDBr30ddGRuBEMo_b1tPjk.jpeg
-                 alt="เกียรติบัตรใบที่ 7">
 
-            <h3>เกียรติบัตรกิจกรรมที่ 7</h3>
+        <div class="certificate">
 
-            <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ผ่านการเรียนและทดสอบตามเกณฑ์ที่กำหนดของหลักสูตรด้านทุจริตศึกษา</p>
-    </div>
+            <img
+                src="prev.IYoP52kTJj3W0E9Z3VPuQqDBr30ddGRuBEMo_b1tPjk.jpeg"
+                alt="เกียรติบัตรใบที่ 7"
+            >
 
-<div class="certificate">
-
-            <img src=IMG_2729.PNG
-                 alt="เกียรติบัตรใบที่ 8">
-
-            <h3>เกียรติบัตรกิจกรรมที่ 8</h3>
+            <h3>
+                ทุจริตศึกษา
+            </h3>
 
             <p>
-            รายละเอียดกิจกรรมหรือการแข่งขัน
-            ได้เข้าร่วมการสอบวัดระดับที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
+                ผ่านการเรียนและทดสอบตามเกณฑ์
+                ที่กำหนดของหลักสูตรด้านทุจริตศึกษา
+            </p>
+
+        </div>
+
+
+        <div class="certificate">
+
+            <img
+                src="IMG_2729.PNG"
+                alt="เกียรติบัตรใบที่ 8"
+            >
+
+            <h3>
+                การสอบวัดระดับ KMITL
+            </h3>
+
+            <p>
+                ได้เข้าร่วมการสอบวัดระดับ
+                ที่สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
+            </p>
+
+        </div>
+
+
     </div>
+
 </section>
 
 
-<!-- ================= กิจกรรม ================= -->
+<!-- ================= ACTIVITIES ================= -->
 
 <section id="activities">
 
-    <h2 class="title">กิจกรรม</h2>
+    <h2 class="section-title">
+        กิจกรรม
+    </h2>
 
-    <div class="card">
 
-        <h3>⚗️ Chemical Engineering Workshop</h3>
+    <div class="card activity">
 
-        <p>
-        เข้าร่วม Workshop ด้านเคมี
-        ได้เรียนรู้เกี่ยวกับการทดลองทางเคมี
-        และการประยุกต์ใช้ความรู้ทางเคมี
-        </p>
+        <div class="activity-icon">
+            ⚗️
+        </div>
+
+        <div>
+
+            <h3>
+                Chemical Engineering Workshop
+            </h3>
+
+            <p>
+                เข้าร่วม Workshop ด้านเคมี
+                ได้เรียนรู้เกี่ยวกับการทดลองทางเคมี
+                และการประยุกต์ใช้ความรู้ทางเคมี
+            </p>
+
+        </div>
 
     </div>
 
 
-    <div class="card">
+    <div class="card activity">
 
-        <h3>🏫 กิจกรรมภายในโรงเรียน</h3>
+        <div class="activity-icon">
+            🏫
+        </div>
 
-        <p>
-        เข้าร่วมกิจกรรมต่าง ๆ ของโรงเรียน
-        และทำงานร่วมกับผู้อื่น
-        เพื่อพัฒนาทักษะการทำงานเป็นทีม
-        </p>
+        <div>
+
+            <h3>
+                กิจกรรมภายในโรงเรียน
+            </h3>
+
+            <p>
+                เข้าร่วมกิจกรรมต่าง ๆ ของโรงเรียน
+                และทำงานร่วมกับผู้อื่น
+                เพื่อพัฒนาทักษะการทำงานเป็นทีม
+            </p>
+
+        </div>
 
     </div>
 
@@ -550,10 +956,18 @@ footer {
 
 <footer>
 
-    <p>Portfolio ของฉัน</p>
+    <p>
+        ⚗️ Portfolio ของฉัน ⚗️
+    </p>
 
-    <p>Thank you for visiting</p>
-<a href="index.html" class="btn">กลับหน้าหลัก</a>
+    <p>
+        Thank you for visiting
+    </p>
+
+    <a href="index.html" class="btn">
+        กลับหน้าหลัก
+    </a>
+
 </footer>
 
 
