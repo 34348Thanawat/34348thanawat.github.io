@@ -19,6 +19,7 @@ body {
     color: #333;
 }
 
+/* เมนู */
 nav {
     background: white;
     padding: 18px 10px;
@@ -37,6 +38,11 @@ nav a {
     display: inline-block;
 }
 
+nav a:hover {
+    color: #b95000;
+}
+
+/* เนื้อหา */
 .container {
     max-width: 950px;
     margin: auto;
@@ -58,15 +64,18 @@ nav a {
     box-shadow: 0 8px 25px rgba(230,120,20,0.12);
 }
 
+/* รูป สจล. */
 .university-img {
-    width: 100%;
-    max-width: 650px;
-    height: 350px;
-    object-fit: cover;
+    width: 90%;
+    max-width: 550px;
+    height: 280px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 25px;
     border-radius: 18px;
-    margin-bottom: 25px;
 }
 
+/* ข้อความ */
 .card h2 {
     color: #e87511;
     margin-bottom: 15px;
@@ -82,6 +91,7 @@ nav a {
     margin: 10px;
 }
 
+/* ปุ่ม */
 .btn-area {
     text-align: center;
     margin-top: 35px;
@@ -98,6 +108,11 @@ nav a {
     font-weight: bold;
 }
 
+.btn:hover {
+    background: #d96508;
+}
+
+/* Footer */
 footer {
     background: #333;
     color: white;
@@ -106,7 +121,9 @@ footer {
     margin-top: 40px;
 }
 
+/* มือถือ */
 @media(max-width:600px) {
+
     nav a {
         font-size: 13px;
         margin: 5px;
@@ -116,8 +133,14 @@ footer {
         font-size: 30px;
     }
 
+    .card {
+        padding: 25px 18px;
+    }
+
     .university-img {
-        height: 250px;
+        width: 100%;
+        max-width: 450px;
+        height: 220px;
     }
 }
 </style>
