@@ -1,167 +1,253 @@
 <!DOCTYPE html>
 <html lang="th">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>คำนำ | Portfolio</title>
+
+<title>Portfolio | Thanawat</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
     font-family:Arial,sans-serif;
-    background:linear-gradient(135deg,#e6f6ff,#f8fcff);
+    background:linear-gradient(135deg,#dff4ff,#f8fcff);
     color:#29465a;
     min-height:100vh;
     display:flex;
     flex-direction:column;
 }
 
+/* NAV */
+
 nav{
     background:white;
-    padding:15px;
+    padding:16px 20px;
     text-align:center;
-    box-shadow:0 3px 15px rgba(0,0,0,.08);
+    box-shadow:0 3px 15px rgba(0,0,0,0.08);
 }
 
 nav a{
-    color:#287db7;
     text-decoration:none;
+    color:#287db7;
     font-weight:bold;
-    margin:0 10px;
+    margin:0 12px;
 }
 
-.page{
+nav a:hover{
+    color:#185b8c;
+}
+
+/* HERO */
+
+.hero{
     flex:1;
+
     display:flex;
-    align-items:center;
     justify-content:center;
-    padding:40px 20px;
-}
+    align-items:center;
 
-.card{
-    max-width:900px;
-    width:100%;
-    background:white;
-    padding:55px;
-    border-radius:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,.08);
-}
-
-.icon{
     text-align:center;
+
+    padding:60px 20px;
+
+    background:
+    radial-gradient(circle at 10% 20%,white,transparent 25%),
+    radial-gradient(circle at 90% 80%,#ccecff,transparent 30%);
+}
+
+.hero-box{
+    max-width:850px;
+    width:100%;
+
+    background:rgba(255,255,255,0.9);
+
+    padding:55px 30px;
+
+    border-radius:30px;
+
+    box-shadow:0 10px 35px rgba(40,120,180,0.15);
+}
+
+.decoration{
     font-size:55px;
     margin-bottom:15px;
 }
 
 h1{
-    text-align:center;
-    color:#287db7;
-    margin-bottom:35px;
+    font-size:55px;
+    color:#2477b7;
+    margin-bottom:10px;
 }
 
-p{
-    font-size:18px;
-    line-height:2;
+h2{
+    font-size:28px;
+    color:#3c6077;
     margin-bottom:20px;
 }
 
-.buttons{
-    text-align:center;
-    margin-top:40px;
+.hero p{
+    font-size:18px;
+    color:#62798a;
+    margin:8px;
 }
+
+/* BUTTON */
 
 .btn{
     display:inline-block;
-    padding:12px 25px;
-    margin:5px;
+
+    margin-top:25px;
+
+    padding:13px 30px;
+
     background:#318bd0;
+
     color:white;
+
     text-decoration:none;
+
     border-radius:25px;
+
     font-weight:bold;
+
+    transition:0.3s;
 }
 
 .btn:hover{
     background:#216da9;
+    transform:translateY(-3px);
 }
 
+/* FOOTER */
+
 footer{
-    text-align:center;
-    padding:20px;
     background:#28526d;
     color:white;
+
+    text-align:center;
+
+    padding:25px;
 }
 
 @media(max-width:600px){
-    .card{
-        padding:30px 20px;
+
+    h1{
+        font-size:38px;
     }
 
-    p{
-        font-size:16px;
+    h2{
+        font-size:22px;
     }
+
+    .hero-box{
+        padding:40px 20px;
+    }
+
+    nav a{
+        font-size:13px;
+        margin:0 5px;
+    }
+
 }
+
 </style>
+
 </head>
+
 
 <body>
 
+
+<!-- เมนู -->
+
 <nav>
-    <a href="index.html">หน้าหลัก</a>
-    <a href="intro.html">คำนำ</a>
-    <a href="profile.html">ประวัติส่วนตัว</a>
+
+    <a href="index.html">
+        หน้าหลัก
+    </a>
+
+    <a href="intro.html">
+        คำนำ
+    </a>
+
+    <a href="profile.html">
+        ประวัติส่วนตัว
+    </a>
+
 </nav>
 
-<div class="page">
 
-<div class="card">
+<!-- หน้าหลัก -->
 
-<div class="icon">📖</div>
+<section class="hero">
 
-<h1>คำนำ</h1>
+    <div class="hero-box">
 
-<p>
-แฟ้มสะสมผลงาน (Portfolio) เล่มนี้จัดทำขึ้นเพื่อรวบรวม
-ประวัติส่วนตัว ผลงาน กิจกรรม และเกียรติบัตร
-ที่แสดงถึงความรู้ ความสามารถ และประสบการณ์ของข้าพเจ้า
-</p>
+        <div class="decoration">
+            ⚗️ 🧪 ✦
+        </div>
 
-<p>
-ข้าพเจ้ามีความสนใจในด้านวิทยาศาสตร์และวิศวกรรม
-โดยเฉพาะวิศวกรรมเคมี และมีความตั้งใจที่จะนำความรู้
-ไปประยุกต์ใช้ในการเรียนและการทำงานในอนาคต
-</p>
+        <h1>
+            PORTFOLIO
+        </h1>
 
-<p>
-ข้าพเจ้าหวังว่าแฟ้มสะสมผลงานเล่มนี้
-จะช่วยแสดงให้เห็นถึงความตั้งใจ ความสนใจ
-และความสามารถของข้าพเจ้าได้เป็นอย่างดี
-</p>
+        <h2>
+            แฟ้มสะสมผลงาน
+        </h2>
 
-<div class="buttons">
+        <p>
+            นายธนวัฒน์ ห้าวหาญ
+        </p>
 
-<a href="index.html" class="btn">
-← หน้าหลัก
-</a>
+        <p>
+            นักเรียนชั้นมัธยมศึกษาปีที่ 6
+        </p>
 
-<a href="profile.html" class="btn">
-ถัดไป →
-</a>
+        <p>
+            ความสนใจ : วิศวกรรมเคมี
+        </p>
 
-</div>
+        <p>
+            แฟ้มสะสมผลงานเพื่อประกอบการศึกษาต่อระดับมหาวิทยาลัย
+        </p>
 
-</div>
 
-</div>
+        <a href="intro.html" class="btn">
+            เริ่มดู Portfolio →
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
 
 <footer>
-Portfolio ของฉัน
+
+    <p>
+        ⚗️ Portfolio ของฉัน ⚗️
+    </p>
+
+    <p>
+        Thank you for visiting
+    </p>
+
 </footer>
 
+
 </body>
+
 </html>
