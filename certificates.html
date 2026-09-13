@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>เกียรติบัตร | Portfolio</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#e6f6ff,#f8fcff);
+color:#29465a;
+min-height:100vh;
+display:flex;
+flex-direction:column;
+}
+
+nav{
+background:white;
+padding:15px;
+text-align:center;
+box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+nav a{
+color:#287db7;
+text-decoration:none;
+font-weight:bold;
+margin:0 10px;
+}
+
+.page{
+flex:1;
+padding:50px 20px;
+}
+
+.container{
+max-width:1000px;
+margin:auto;
+}
+
+h1{
+text-align:center;
+color:#287db7;
+margin-bottom:40px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:20px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+}
+
+.card img{
+width:100%;
+height:230px;
+object-fit:contain;
+border-radius:15px;
+background:#f5faff;
+margin-bottom:15px;
+}
+
+h2{
+color:#287db7;
+font-size:20px;
+margin-bottom:10px;
+}
+
+p{
+font-size:15px;
+line-height:1.7;
+}
+
+.buttons{
+text-align:center;
+margin-top:45px;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+margin:5px;
+background:#318bd0;
+color:white;
+text-decoration:none;
+border-radius:25px;
+font-weight:bold;
+}
+
+footer{
+text-align:center;
+padding:20px;
+background:#28526d;
+color:white;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">หน้าหลัก</a>
+<a href="intro.html">คำนำ</a>
+<a href="profile.html">ประวัติส่วนตัว</a>
+</nav>
+
+<div class="page">
+
+<div class="container">
+
+<h1>เกียรติบัตร ✦</h1>
+
+<div class="grid">
+
+<!-- ใบที่ 1 -->
+<div class="card">
+
+<img src="certificate1.jpg" alt="เกียรติบัตรใบที่ 1">
+
+<h2>เกียรติบัตรใบที่ 1</h2>
+
+<p>
+รายละเอียดเกียรติบัตร
+</p>
+
+</div>
+
+
+<!-- ใบที่ 2 -->
+<div class="card">
+
+<img src="certificate2.jpg" alt="เกียรติบัตรใบที่ 2">
+
+<h2>เกียรติบัตรใบที่ 2</h2>
+
+<p>
+รายละเอียดเกียรติบัตร
+</p>
+
+</div>
+
+
+<!-- ใบที่ 3 -->
+<div class="card">
+
+<img src="certificate3.jpg" alt="เกียรติบัตรใบที่ 3">
+
+<h2>เกียรติบัตรใบที่ 3</h2>
+
+<p>
+รายละเอียดเกียรติบัตร
+</p>
+
+</div>
+
+</div>
+
+<div class="buttons">
+
+<a href="projects.html" class="btn">← ย้อนกลับ</a>
+
+<a href="index.html" class="btn">หน้าหลัก</a>
+
+<a href="activities.html" class="btn">ถัดไป →</a>
+
+</div>
+
+</div>
+</div>
+
+<footer>Portfolio ของฉัน</footer>
+
+</body>
+</html>
