@@ -3,100 +3,118 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ประวัติส่วนตัว | Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#e6f6ff,#f8fcff);
-color:#29465a;
-min-height:100vh;
-display:flex;
-flex-direction:column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ef;
+    color: #333;
 }
 
-nav a{
-color:#287db7;
-text-decoration:none;
-font-weight:bold;
-margin:0 10px;
+nav {
+    background: white;
+    padding: 18px 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.page{
-flex:1;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:40px 20px;
+nav a {
+    color: #e87511;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 9px;
+    display: inline-block;
 }
 
-.card{
-max-width:850px;
-width:100%;
-background:white;
-padding:50px;
-border-radius:30px;
-text-align:center;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
+.container {
+    max-width: 950px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-.profile-img{
-width:190px;
-height:190px;
-object-fit:cover;
-border-radius:50%;
-border:7px solid #b9e2fa;
-margin-bottom:20px;
+.title {
+    text-align: center;
+    color: #e87511;
+    font-size: 38px;
+    margin-bottom: 35px;
 }
 
-h1{
-color:#287db7;
-margin-bottom:20px;
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(230,120,20,0.12);
 }
 
-h2{
-color:#315a72;
-margin-bottom:15px;
+.profile-img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid #f58220;
+    margin-bottom: 25px;
 }
 
-p{
-font-size:18px;
-margin:8px;
+.card h2 {
+    color: #444;
+    margin-bottom: 20px;
 }
 
-.buttons{
-margin-top:35px;
+.card p {
+    margin: 10px;
+    font-size: 18px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin:5px;
-background:#318bd0;
-color:white;
-text-decoration:none;
-border-radius:25px;
-font-weight:bold;
+.btn-area {
+    text-align: center;
+    margin-top: 35px;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#28526d;
-color:white;
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    background: #f58220;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
-@media(max-width:600px){
-.card{padding:35px 20px}
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:600px) {
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .profile-img {
+        width: 170px;
+        height: 170px;
+    }
 }
 </style>
 </head>
@@ -104,41 +122,56 @@ color:white;
 <body>
 
 <nav>
-<a href="index.html">หน้าหลัก</a>
-<a href="intro.html">คำนำ</a>
-<a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="intro.html">คำนำ</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="projects.html">ผลงาน</a>
+    <a href="certificates.html">เกียรติบัตร</a>
+    <a href="activities.html">กิจกรรม</a>
 </nav>
 
-<div class="page">
+<div class="container">
 
-<div class="card">
+    <h1 class="title">ประวัติส่วนตัว</h1>
 
-<img src="IMG_2192.jpeg" alt="รูปโปรไฟล์" class="profile-img">
+    <div class="card">
 
-<h1>ประวัติส่วนตัว</h1>
+        <img src="profile.jpg"
+             alt="รูปโปรไฟล์"
+             class="profile-img">
 
-<h2>นายธนวัฒน์ ห้าวหาญ</h2>
+        <h2>นายธนวัฒน์ ห้าวหาญ</h2>
 
-<p>ชื่อเล่น : กาฟิวส์</p>
-<p>ระดับชั้น : มัธยมศึกษาปีที่ 6</p>
-<p>โรงเรียน : บ้านบึง "อุตสาหกรรมนุเคราะห์"</p>
-<p>แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์(เตรียมวิศวะ)</p>
-<p>ความสนใจ : วิศวกรรมเคมี</p>
-<p>มหาลัยที่อยากเข้า : สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</p>
-<div class="buttons">
+        <p>ชื่อเล่น : ฟิว</p>
 
-<a href="intro.html" class="btn">← ย้อนกลับ</a>
+        <p>ระดับชั้น : มัธยมศึกษาปีที่ 6</p>
 
-<a href="index.html" class="btn">หน้าหลัก</a>
+        <p>โรงเรียน : บ้านบึง "อุตสาหกรรมนุเคราะห์"</p>
 
-<a href="university.html" class="btn">ถัดไป →</a>
+        <p>แผนการเรียน : วิทยาศาสตร์ - คณิตศาสตร์</p>
+
+        <p>ความสนใจ : วิศวกรรมเคมี</p>
+
+    </div>
+
+    <div class="btn-area">
+
+        <a href="intro.html" class="btn">
+            ← คำนำ
+        </a>
+
+        <a href="university.html" class="btn">
+            มหาวิทยาลัย →
+        </a>
+
+    </div>
 
 </div>
 
-</div>
-</div>
-
-<footer>Portfolio ของฉัน</footer>
+<footer>
+    <p>🧡 Portfolio ของฉัน</p>
+</footer>
 
 </body>
 </html>
