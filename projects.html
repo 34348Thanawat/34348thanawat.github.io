@@ -3,100 +3,122 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ผลงาน | Portfolio</title>
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-
-body{
-font-family:Arial,sans-serif;
-background:linear-gradient(135deg,#e6f6ff,#f8fcff);
-color:#29465a;
-min-height:100vh;
-display:flex;
-flex-direction:column;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-nav{
-background:white;
-padding:15px;
-text-align:center;
-box-shadow:0 3px 15px rgba(0,0,0,.08);
+body {
+    font-family: Arial, sans-serif;
+    background: #fff7ef;
+    color: #333;
 }
 
-nav a{
-color:#287db7;
-text-decoration:none;
-font-weight:bold;
-margin:0 10px;
+nav {
+    background: white;
+    padding: 18px 10px;
+    text-align: center;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }
 
-.page{
-flex:1;
-padding:50px 20px;
+nav a {
+    color: #e87511;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 9px;
+    display: inline-block;
 }
 
-.container{
-max-width:950px;
-margin:auto;
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 60px 20px;
 }
 
-h1{
-text-align:center;
-color:#287db7;
-margin-bottom:40px;
+.title {
+    text-align: center;
+    color: #e87511;
+    font-size: 38px;
+    margin-bottom: 35px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:25px;
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
 }
 
-.card{
-background:white;
-padding:35px;
-border-radius:25px;
-box-shadow:0 8px 25px rgba(0,0,0,.08);
-border-top:5px solid #62b5e8;
+.project {
+    background: white;
+    padding: 25px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(230,120,20,0.12);
 }
 
-.icon{
-font-size:55px;
-margin-bottom:15px;
+.project img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-h2{
-color:#287db7;
-margin-bottom:15px;
+.project h2 {
+    color: #e87511;
+    margin-bottom: 15px;
 }
 
-p{
-font-size:17px;
-line-height:1.8;
+.project p {
+    line-height: 1.8;
 }
 
-.buttons{
-text-align:center;
-margin-top:45px;
+.btn-area {
+    text-align: center;
+    margin-top: 35px;
 }
 
-.btn{
-display:inline-block;
-padding:12px 25px;
-margin:5px;
-background:#318bd0;
-color:white;
-text-decoration:none;
-border-radius:25px;
-font-weight:bold;
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 5px;
+    background: #f58220;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
-footer{
-text-align:center;
-padding:20px;
-background:#28526d;
-color:white;
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+}
+
+@media(max-width:700px) {
+
+    nav a {
+        font-size: 13px;
+        margin: 5px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        font-size: 30px;
+    }
 }
 </style>
 </head>
@@ -104,63 +126,73 @@ color:white;
 <body>
 
 <nav>
-<a href="index.html">หน้าหลัก</a>
-<a href="intro.html">คำนำ</a>
-<a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="index.html">หน้าหลัก</a>
+    <a href="intro.html">คำนำ</a>
+    <a href="profile.html">ประวัติส่วนตัว</a>
+    <a href="university.html">มหาวิทยาลัย</a>
+    <a href="projects.html">ผลงาน</a>
+    <a href="certificates.html">เกียรติบัตร</a>
+    <a href="activities.html">กิจกรรม</a>
 </nav>
-
-<div class="page">
 
 <div class="container">
 
-<h1>ผลงาน ✦</h1>
+    <h1 class="title">ผลงาน</h1>
 
-<div class="grid">
+    <div class="grid">
 
-<div class="card">
+        <!-- โครงงานสมุนไพร -->
+        <div class="project">
 
-<div class="icon">🧪</div>
+            <img src="herbal.jpg"
+                 alt="โครงงานยาดมสมุนไพร">
 
-<h2>โครงงานยาดมสมุนไพร</h2>
+            <h2>🧪 โครงงานยาดมสมุนไพร</h2>
 
-<p>
-ศึกษาและพัฒนายาดมสมุนไพร
-โดยเปรียบเทียบสูตรของสมุนไพร
-และศึกษาความพึงพอใจของผู้ใช้งาน
-</p>
+            <p>
+                ศึกษาและพัฒนายาดมสมุนไพร
+                โดยเปรียบเทียบสูตรของสมุนไพร
+                และศึกษาความพึงพอใจของผู้ใช้งาน
+            </p>
+
+        </div>
+
+
+        <!-- ถังขยะอัจฉริยะ -->
+        <div class="project">
+
+            <img src="smart-bin.jpg"
+                 alt="ถังขยะอัจฉริยะ">
+
+            <h2>🗑️ ถังขยะอัจฉริยะ</h2>
+
+            <p>
+                ออกแบบถังขยะอัจฉริยะโดยใช้ ESP32
+                และเซนเซอร์ Ultrasonic
+                เพื่อตรวจสอบระดับขยะ
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="btn-area">
+
+        <a href="university.html" class="btn">
+            ← มหาวิทยาลัย
+        </a>
+
+        <a href="certificates.html" class="btn">
+            เกียรติบัตร →
+        </a>
+
+    </div>
 
 </div>
 
-<div class="card">
-
-<div class="icon">🗑️</div>
-
-<h2>ถังขยะอัจฉริยะ</h2>
-
-<p>
-ออกแบบถังขยะอัจฉริยะโดยใช้ ESP32
-และเซนเซอร์ Ultrasonic
-เพื่อตรวจสอบระดับขยะ
-</p>
-
-</div>
-
-</div>
-
-<div class="buttons">
-
-<a href="university.html" class="btn">← ย้อนกลับ</a>
-
-<a href="index.html" class="btn">หน้าหลัก</a>
-
-<a href="certificates.html" class="btn">ถัดไป →</a>
-
-</div>
-
-</div>
-</div>
-
-<footer>Portfolio ของฉัน</footer>
+<footer>
+    <p>🧡 Portfolio ของฉัน</p>
+</footer>
 
 </body>
 </html>
